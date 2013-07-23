@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.sni.test</groupId>
+  <artifactId>SeleniumSauce</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>SeleniumSauce</name>
+  <description>Project to demo the integration of Selenium Framework (webdriver) with Sauce labs.</description>
+  <build>
+        <plugins>
+        	<!-- Lines to make testNG start with the Test.xml file -->  
+		      <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-surefire-plugin</artifactId>
+		        <version>2.15</version>
+		        <configuration>
+		        	<redirectTestOutputToFile>true</redirectTestOutputToFile>
+              		<suiteXmlFiles>
+	            		<suiteXmlFile>Test.xml</suiteXmlFile>
+          	  		</suiteXmlFiles>
+        		</configuration>
+      		  </plugin>
+		</plugins>
+	</build>
+    <dependencies>
+			<!-- Dependencies for Selenium and TestNG -->            
+			<dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-java</artifactId>
+                <version>2.33.0</version>
+            </dependency>
+			<dependency>
+		        <groupId>org.seleniumhq.selenium</groupId>
+		        <artifactId>selenium-firefox-driver</artifactId>
+		        <version>2.33.0</version>
+    		</dependency> 
+            <dependency>
+      				<groupId>org.testng</groupId>
+      				<artifactId>testng</artifactId>
+      				<version>6.3.1</version>
+      				<scope>test</scope>
+    		 </dependency>
+    		 <!-- Dependencies for Jersey -->     
+ 			 <dependency>
+					<groupId>com.sun.jersey</groupId>
+					<artifactId>jersey-client</artifactId>
+					<version>1.8</version>
+			 </dependency>
+			 <!-- Dependencies for Sauce-->
+	         <dependency>
+	            <groupId>commons-lang</groupId>
+	            <artifactId>commons-lang</artifactId>
+	            <version>2.6</version>
+	            <scope>test</scope>
+	         </dependency>
+  	         <dependency>
+	            <groupId>com.saucelabs</groupId>
+	            <artifactId>sauce_testng</artifactId>
+	            <version>1.0.19</version>
+	            <scope>test</scope>
+	         </dependency>			
+     </dependencies>
+     <repositories>
+        <repository>
+            <id>saucelabs-repository</id>
+            <url>http://repository-saucelabs.forge.cloudbees.com/release</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+     </repositories>
+</project>

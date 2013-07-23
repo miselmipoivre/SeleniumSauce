@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="POCSeleniumSauce">
+    <parameter name="username" value="ScrippsQA1"/>
+    <parameter name="key" value="2e780720-5e06-4e26-bf60-39960657a049"/>
+	  	<test name= "RESTCall" verbose="2">
+	    <parameter name="os" value="Windows 2003"/>
+	    <parameter name="browser" value="firefox"/>
+	    <parameter name="browserVersion" value="17"/>
+	    <parameter name="userId" value="1550012519"/>
+	    <classes>
+	      <class name="com.sni.test.TC01_RestAndWeb"/>
+	      	<methods>
+	      	
+	        	<include name="RESTUsingBrowser"/>
+	      	</methods>
+	    </classes> 
+     </test>
+	 <test name= "WebUITest" verbose="2">
+	    <parameter name="os" value="Windows 7"/>
+	    <parameter name="browser" value="Chrome"/>
+	    <parameter name="browserVersion" value="27"/>
+	    <classes>
+	      <class name="com.sni.test.TC01_RestAndWeb"/>
+	      	<methods>
+	        	<include name="WebUITest"/>
+	      	</methods>
+	    </classes>
+	  </test> -->
+ 	  <test name= "RESTCallUsingJersey" verbose="2">
+ 	        <parameter name="userId" value="1550012520"/>
+		    <classes>
+		      <class name="com.sni.test.TC01_RestAndWeb"/>
+		      	<methods>
+		        	<include name="RESTUsingHtmlUnit"/>
+		      	</methods>
+		    </classes>
+ 	   </test>  
+</suite>

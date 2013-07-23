@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 74.175 sec <<< FAILURE! - in TestSuite
+RESTUsingBrowser(com.sni.test.TC01_RestAndWeb)  Time elapsed: 44.009 sec  <<< FAILURE!
+java.lang.AssertionError: The response message didn't have the user ID
+	at com.sni.test.TC01_RestAndWeb.RESTUsingBrowser(TC01_RestAndWeb.java:69)
+
+RESTUsingHtmlUnit(com.sni.test.TC01_RestAndWeb)  Time elapsed: 0.913 sec  <<< FAILURE!
+java.lang.AssertionError: The response message didn't have the user ID
+	at com.sni.test.TC01_RestAndWeb.RESTUsingHtmlUnit(TC01_RestAndWeb.java:108)
+

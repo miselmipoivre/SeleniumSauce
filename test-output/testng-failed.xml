@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [POCSeleniumSauce]">
+  <parameter name="os" value="Windows 7"/>
+  <parameter name="username" value="ScrippsQA1"/>
+  <parameter name="browserVersion" value="27"/>
+  <parameter name="userId" value="1550012520"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="key" value="2e780720-5e06-4e26-bf60-39960657a049"/>
+  <test name="WebUITest(failed)">
+    <parameter name="os" value="Windows 7"/>
+    <parameter name="browserVersion" value="27"/>
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.sni.test.TC01_RestAndWeb">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="WebUITest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.sni.test.TC01_RestAndWeb -->
+    </classes>
+  </test> <!-- WebUITest(failed) -->
+  <test name="RESTCallUsingJersey(failed)">
+    <parameter name="userId" value="1550012520"/>
+    <classes>
+      <class name="com.sni.test.TC01_RestAndWeb">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="RESTUsingHtmlUnit" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.sni.test.TC01_RestAndWeb -->
+    </classes>
+  </test> <!-- RESTCallUsingJersey(failed) -->
+</suite> <!-- Failed suite [POCSeleniumSauce] -->
